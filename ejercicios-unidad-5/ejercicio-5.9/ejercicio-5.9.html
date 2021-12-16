@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ejercicio 5.9</title>
+        <script type="text/javascript" src="ejercicio-5.9.js"></script>
+        <style type="text/css">
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:150px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:orange;
+                width:400px;
+                border: thick solid #306;
+                font-weight: 900;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+            #mensajes{
+                float: left;
+                background:#33FF33;
+                width: 325px;
+            }
+            #errores{
+                float: left;
+                background:#FF6633;
+                width: 325px;
+            }
+            #intentos{
+                float: left;
+                background:#CCFF33;
+                width: 325px;
+            }
+            .error{
+                border: solid 2px #FF0000;
+            }
+
+            #name-error, #lastname-error, #age-error, 
+            #nif-error, #email-error, #town-error, #date-error, 
+            #phone-error, #time-error {
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>AMAZON.es</legend>
+            <form name="formulario" id="formulario" method="get">
+                
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" >
+
+                <br>
+                
+                <label for="email-phone">Número de móvil o dirección de correo electrónico:</label>
+                <input name="email-phone" type="text" id="email-phone"/>
+
+                <br>
+                
+                <label for="password">Contraseña:</label>
+                <input name="password" type="password" id="password"/>
+
+                <br>
+
+                <label for="confirm-password">Confirma tu contraseña:</label>
+                <input name="confirm-password" type="password" id="confirm-password"/>
+
+                <br>
+
+                <input type="submit" name="submit-button" id="submit-button" value="Continue" />
+
+            </form> 
+        </fieldset>
+    </body>
+</html>

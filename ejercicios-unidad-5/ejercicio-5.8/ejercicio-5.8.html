@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ejercicio-8</title>
+        <script type="text/javascript" src="ejercicio-5.8.js"></script>
+        <style type="text/css">
+            p {
+                font-size: large;
+                background-color: rgb(189, 185, 185);
+            }
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:150px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:#66CCCC;
+                width:600px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+            #mensajes{
+                float: left;
+                background:#33FF33;
+                width: 325px;
+            }
+            #errores{
+                float: left;
+                background:#FF6633;
+                width: 325px;
+            }
+            #intentos{
+                float: left;
+                background:#CCFF33;
+                width: 325px;
+            }
+            .error{
+                border: solid 2px #FF0000;
+            }
+
+            #question1-false, #question2-false, #question3-false, 
+            #question4-false, #question5-false, #question6-false, 
+            #question7-false, #question8-false, #question9-false, 
+            #question10-false {
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+
+            #question1-true, #question2-true, #question3-true,
+            #question4-true, #question5-true, #question6-true,
+            #question7-true, #question8-true, #question9-true,
+            #question10-true {
+                color: greenyellow;
+                font-weight: 700;
+                font-size: large;
+            }
+
+            .paragraph-red {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>EJERCICIO 8</legend>
+            <form name="formulario" id="formulario" method="get">
+
+                <p id="question1-title">1+2?<span id="question1-false"></span><span id="question1-true"></span></p>
+                <label for="question1-answer1">3:</label>
+                <input type="radio" id="question1-answer1" name="question1" value="true">
+                <label for="question1-answer2">2:</label>
+                <input type="radio" id="question1-answer2" name="question1" value="false">
+                <label for="question1-answer3">5:</label>
+                <input type="radio" id="question1-answer3" name="question1" value="false">
+                <br>
+
+                <p id="question2-title">2+2?<span id="question2-false"></span><span id="question2-true"></span></p>
+                <label for="question2-answer1">5:</label>
+                <input type="radio" id="question2-answer1" name="question2" value="false">
+                <label for="question2-answer2">4:</label>
+                <input type="radio" id="question2-answer2" name="question2" value="true">
+                <label for="question2-answer3">36:</label>
+                <input type="radio" id="question2-answer3" name="question2" value="false">
+                <br>
+
+                <p id="question3-title">10+35?<span id="question3-false"></span><span id="question3-true"></span></p>
+                <label for="question3-answer1">45:</label>
+                <input type="radio" id="question3-answer1" name="question3" value="true">
+                <label for="question3-answer2">75:</label>
+                <input type="radio" id="question3-answer2" name="question3" value="false">
+                <label for="question3-answer3">28:</label>
+                <input type="radio" id="question3-answer3" name="question3" value="false">
+                <br>
+                
+                <p id="question4-title">100+73?<span id="question4-false"></span><span id="question4-true"></span></p>
+                <label for="question4-answer1">173:</label>
+                <input type="radio" id="question4-answer1" name="question4" value="true">
+                <label for="question4-answer2">2:</label>
+                <input type="radio" id="question4-answer2" name="question4" value="false">
+                <label for="question4-answer3">195:</label>
+                <input type="radio" id="question4-answer3" name="question4" value="false">
+                <br>
+
+                <p id="question5-title">57+43?<span id="question5-false"></span><span id="question5-true"></span></p>
+                <label for="question5-answer1">123:</label>
+                <input type="radio" id="question5-answer1" name="question5" value="false">
+                <label for="question5-answer2">100:</label>
+                <input type="radio" id="question5-answer2" name="question5" value="true">
+                <label for="question5-answer3">184:</label>
+                <input type="radio" id="question5-answer3" name="question5" value="false">
+                <br>
+
+                <p id="question6-title">15+15?<span id="question6-false"></span><span id="question6-true"></span></p>
+                <label for="question6-answer1">30:</label>
+                <input type="radio" id="question6-answer1" name="question6" value="true">
+                <label for="question6-answer2">75:</label>
+                <input type="radio" id="question6-answer2" name="question6" value="false">
+                <label for="question6-answer3">86:</label>
+                <input type="radio" id="question6-answer3" name="question6" value="false">
+                <br>
+
+                <p id="question7-title">150+50?<span id="question7-false"></span><span id="question7-true"></span></p>
+                <label for="question7-answer1">200:</label>
+                <input type="radio" id="question7-answer1" name="question7" value="true">
+                <label for="question7-answer2">900:</label>
+                <input type="radio" id="question7-answer2" name="question7" value="false">
+                <label for="question7-answer3">28:</label>
+                <input type="radio" id="question7-answer3" name="question7" value="false">
+                <br>
+
+                <p id="question8-title">1000+2000?<span id="question8-false"></span><span id="question8-true"></span></p>
+                <label for="question8-answer1">4000:</label>
+                <input type="radio" id="question8-answer1" name="question8" value="false">
+                <label for="question8-answer2">3000:</label>
+                <input type="radio" id="question8-answer2" name="question8" value="true">
+                <label for="question8-answer3">487:</label>
+                <input type="radio" id="question8-answer3" name="question8" value="false">
+                <br>
+
+                <p id="question9-title">23+3?<span id="question9-false"></span><span id="question9-true"></span></p>
+                <label for="question9-answer1">26:</label>
+                <input type="radio" id="question9-answer1" name="question9" value="true">
+                <label for="question9-answer2">75:</label>
+                <input type="radio" id="question9-answer2" name="question9" value="false">
+                <label for="question9-answer3">163:</label>
+                <input type="radio" id="question9-answer3" name="question9" value="false">
+                <br>
+
+                <p id="question10-title">16+94?<span id="question10-false"></span><span id="question10-true"></span></p>
+                <label for="question10-answer1">110:</label>
+                <input type="radio" id="question10-answer1" name="question10" value="true">
+                <label for="question10-answer2">100:</label>
+                <input type="radio" id="question10-answer2" name="question10" value="false">
+                <label for="question10-answer3">182:</label>
+                <input type="radio" id="question10-answer3" name="question10" value="false">
+                <br>
+
+                <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </form> 
+            <ol></ol>
+        </fieldset>
+    </body>
+</html>

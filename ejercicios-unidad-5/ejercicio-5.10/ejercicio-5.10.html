@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>EJERCICIO 10</title>
+        <script type="text/javascript" src="ejercicio-5.10.js"></script>
+        <style type="text/css">
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:170px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:orange;
+                width:400px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>ACCEDE A TU ÁREA DE CLIENTE</legend>
+            <form name="formulario" id="formulario" method="get" action="security-key.html">
+                
+                <p id="document-p">Elige tu documento:</p>
+                <input type="radio" id="dni" name="document" value="dni">
+                <label for="dni">DNI o Tarjeta de residencia</label>
+                <input type="radio" id="passport" name="document" value="passport">
+                <label for="passport">Pasaporte</label>
+                <br>
+
+                <label for="dni-input">Número de documento:</label><br>
+                <input name="dni-input" type="text" id="dni-input" placeholder="DNI o Tarjeta de residencia" maxlength="10"/>
+                <br>
+
+                <label for="date-input">Fecha de Nacimiento:</label><br>
+                <input name="date-input" type="text" id="date-input"/>
+                <br>
+
+                <input type="checkbox" id="remember" name="remember" value="remember">
+                <label for="remember">Recordar</label><br>
+
+                <input type="submit" name="enviar" id="enviar" value="Entrar" />
+            </form> 
+
+        </fieldset>
+    </body>
+</html>

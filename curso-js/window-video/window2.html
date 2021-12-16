@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>window 2</title>
+  </head>
+  <body>
+    <p id="the-clock"></p>
+
+    <script>
+      const sayHello = () => {
+        alert("Hello!");
+      };
+
+      const clock = () => {
+        let date = new Date();
+        document.getElementById("the-clock").innerHTML = date.getSeconds();
+      };
+
+      let int = setInterval(clock, 1000);
+    </script>
+
+    <button onclick="setTimeout(sayHello,3000)">
+      say hello after 3 seconds
+    </button>
+
+    <button onclick="clearTimeout(int)">cancel clock</button>
+  </body>
+</html>

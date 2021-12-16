@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #board {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .card {
+        background-color: limegreen;
+        border: 4px solid blueviolet;
+        text-align: center;
+        font-size: 40px;
+        color: blueviolet;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <title>Card Game</title>
+  </head>
+  <body>
+    <div id="board">
+      <div id="card1" class="card">
+        <img
+          id="0"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="sunny"
+        />
+      </div>
+      <div id="card2" class="card">
+        <img
+          id="1"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="rainy"
+        />
+      </div>
+      <div id="card3" class="card">
+        <img
+          id="2"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="windy"
+        />
+      </div>
+      <div id="card4" class="card">
+        <img
+          id="3"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="cloudy"
+        />
+      </div>
+      <div id="card5" class="card">
+        <img
+          id="4"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="snowy"
+        />
+      </div>
+      <div id="card6" class="card">
+        <img
+          id="5"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="stormy"
+        />
+      </div>
+      <div id="card7" class="card">
+        <img
+          id="6"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="sunny"
+        />
+      </div>
+      <div id="card8" class="card">
+        <img
+          id="7"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="rainy"
+        />
+      </div>
+      <div id="card9" class="card">
+        <img
+          id="8"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="windy"
+        />
+      </div>
+      <div id="card10" class="card">
+        <img
+          id="9"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="cloudy"
+        />
+      </div>
+      <div id="card11" class="card">
+        <img
+          id="10"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="snowy"
+        />
+      </div>
+      <div id="card12" class="card">
+        <img
+          id="11"
+          src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg"
+          alt="stormy"
+        />
+      </div>
+    </div>
+    <h3 id="menssage"></h3>
+    <h4 id="victories"></h4>
+  </body>
+
+  <script>
+    window.addEventListener("load", askName);
+
+    const askName = () => {
+      let theName;
+      if (!document.cookie) {
+        theName = prompt("Write your name: ");
+        document.cookie = `name = ${theName}`;
+      } else {
+        let name = document.cookie.split("=")[1];
+        alert(`Welcome back, ${name}`);
+      }
+    }
+
+    let arrayImg = [
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/sunny-flashcard.jpg",
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/rainy-flashcard.jpg",
+      "https://i2.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/windy-flashcard.jpg",
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/cloudy-flashcard.jpg",
+      "https://i2.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/snowy-flashcard.jpg",
+      "https://i0.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/stormy-flashcard.jpg",
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/sunny-flashcard.jpg",
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/rainy-flashcard.jpg",
+      "https://i2.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/windy-flashcard.jpg",
+      "https://i1.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/cloudy-flashcard.jpg",
+      "https://i2.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/snowy-flashcard.jpg",
+      "https://i0.wp.com/www.flashcardsforkindergarten.com/wp-content/uploads/2015/07/stormy-flashcard.jpg",
+    ];
+
+    let theColor =
+      "https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg";
+
+    let squaresArray = document.getElementsByTagName("img");
+
+    for (let index = 0; index < arrayImg.length; index++) {
+      squaresArray[index].addEventListener("click", watchImage);
+    }
+
+    let counter = 0;
+    let firstCard = true;
+    let card1;
+    let card2;
+    let victories = 0;
+
+    const watchImage = (e) => {
+      if (firstCard) {
+        card1 = this.src = arrayImg[e.target.id];
+        firstCard = false;
+      } else {
+        card2 = this.src = arrayImg[e.target.id];
+      }
+      counter = counter + 1;
+      console.log(counter);
+      if (counter >= 2) {
+        compareImages();
+        counter = 0;
+        firstCard = true;
+      }
+    }
+
+    const compareImages = () => {
+      if (card1 === card2) {
+        document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").style.color = "lightgreen";
+        victories++;
+        document.getElementById("victories").innerHTML =
+          "Number of victories: " + victories;
+      } else {
+        document.getElementById("message").innerHTML =
+          "You have failed, try again.";
+        document.getElementById("message").style.color = "red";
+
+        setTimeout(() => {
+          for (let index = 0; index < squaresArray.length; index++) {
+            squaresArray[index].src =
+              "https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg";
+          }
+        }, 1000);
+      }
+    }
+  </script>
+</html>

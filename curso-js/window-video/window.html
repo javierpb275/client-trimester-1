@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window video</title>
+  </head>
+  <body>
+    <h1>window video</h1>
+    <p id="window"></p>
+    <button onclick="createWindow()">create window</button>
+    <button onclick="closeWindow()">close window</button>
+    <button onclick="resizeWindow()">resize window</button>
+    <script>
+      window.name = "my window";
+      let text = "";
+      text += "<br>name: " + window.name;
+      //outer width and height
+      text += "<br>outer width: " + window.outerWidth;
+      text += "<br>outer height: " + window.outerHeight;
+      //inner width and height
+      text += "<br>inner width: " + window.innerWidth;
+      text += "<br>inner height: " + window.innerHeight;
+      //scroll
+      text += "<br>horizontal scroll: " + window.pageXOffset;
+      text += "<br>vertical scroll: " + window.pageYOffset;
+      //distance
+      text += "<br>distance from left: " + window.screenX;
+      text += "<br>distance from top: " + window.screenY;
+
+      document.getElementById("window").innerHTML = text;
+
+      //-------------------------------------
+
+      let myWindow;
+
+      //open(): open a new window
+      const createWindow = () => {
+        //myWindow = window.open("https://www.google.es/", "", "");
+        myWindow = window.open("", "", "width=500,height=200");
+        myWindow.document.write("<h1>My Window</h1>");
+      };
+
+      //close(): close my window
+      const closeWindow = () => {
+        myWindow.close();
+      };
+
+      //resizeBy()
+      const resizeWindow = () => {
+        myWindow.resizeBy(40, 40);
+      };
+
+      //moveBy()
+      const moveWindow = () => {
+        myWindow.moveBy(40, 40);
+      };
+
+      //focus()
+      const focusWindow = () => {
+        myWindow.focus(40, 40);
+      };
+
+      //print()
+      const printWindowContent = () => {
+        myWindow.print();
+      };
+
+      //-----------------------------------
+
+      //alert()
+      const myAlert = () => {
+        alert("MY ALERT");
+      };
+
+      //prompt()
+      const myPrompt = () => {
+        const promptValue = prompt("enter some value");
+        alert(`Hello ${promptValue}`);
+      };
+
+    </script>
+  </body>
+</html>

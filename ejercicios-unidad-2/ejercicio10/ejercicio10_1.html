@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ejercicio 10</title>
+    <script src="ejercicio10.js"></script>
+  </head>
+  <body>
+    <h1>EJERCICIO 10</h1>
+    <p>
+      Realiza un programa que solicite, un nombre de un jugadora de fútbol de la
+      selección y que responda si está convocada o no para el siguiente partido.
+      La lista de convocadas es: Luisa, Maria, Carlota, Ana, Martina y
+      Claudia.<br />
+
+      Resuélvelo de dos maneras distintas.
+    </p>
+    <div class="result-container-1">
+      <h4>Introduce player:</h4>
+      <input type="text" name="player1" id="player1" />
+      <input
+        type="button"
+        onclick="checkCalledPlayer1(document.getElementById('player1').value)"
+        value="solution 1"
+      />
+    </div>
+    <div class="result-container-2">
+        <h4>Introduce player:</h4>
+        <input type="text" name="player2" id="player2" />
+        <input
+          type="button"
+          onclick="checkCalledPlayer2(document.getElementById('player2').value)"
+          value="solution 2"
+        />
+      </div>
+  </body>
+</html>

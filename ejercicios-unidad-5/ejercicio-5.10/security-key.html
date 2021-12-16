@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>EJERCICIO 10</title>
+        <script type="text/javascript" src="ejercicio-5.10.js"></script>
+        <style type="text/css">
+            input,select {
+                width:10px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:orange;
+                width:400px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>CLAVE DE SEGURIDAD</legend>
+            <form name="formulario" id="formulario" method="get">
+                
+                <p id="security-key-p">Completa las posiciones que faltan de tu clave de seguridad:</p>
+                
+                <input name="input-1" type="password" id="input-1" maxlength="1"/>
+                <input name="input-2" type="password" id="input-2" maxlength="1"/>
+                <input name="input-3" type="password" id="input-3" maxlength="1"/>
+                <input name="input-4" type="password" id="input-4" maxlength="1"/>
+                <input name="input-5" type="password" id="input-5" maxlength="1"/>
+                <input name="input-6" type="password" id="input-6" maxlength="1"/>
+                <br>
+
+                <button id="button-0">0</button>
+                <button id="button-1">1</button>
+                <button id="button-2">2</button>
+                <button id="button-3">3</button>
+                <button id="button-4">4</button>
+                <br>
+                <button id="button-5">5</button>
+                <button id="button-6">6</button>
+                <button id="button-7">7</button>
+                <button id="button-8">8</button>
+                <button id="button-9">9</button>
+
+                <button id="enter-button">enter</button>
+               
+            </form> 
+        </fieldset>
+        <div id="message"></div>
+    </body>
+</html>

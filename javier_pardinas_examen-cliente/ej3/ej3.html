@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ejercicio 3</title>
+        <script type="text/javascript" src="ej3.js"></script>
+        <style type="text/css">
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:150px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:#66CCCC;
+                width:400px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+            #mensajes{
+                float: left;
+                background:#33FF33;
+                width: 325px;
+            }
+            #errores{
+                float: left;
+                background:#FF6633;
+                width: 325px;
+            }
+            #intentos{
+                float: left;
+                background:#CCFF33;
+                width: 325px;
+            }
+            .error{
+                border: solid 2px #FF0000;
+            }
+
+            #name-error, #lastname-error, #age-error, 
+            #nif-error, #email-error, #town-error, #date-error, 
+            #phone-error, #time-error {
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>EJERCICIO 3</legend>
+            <form name="formulario" id="formulario" method="get" action="ejercicio3.html">
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre"/>
+                <div id="name-error"></div>
+                
+                <label for="edad">Edad:</label>
+                <input name="edad" type="text" id="edad" maxlength="3"/>
+                <div id="age-error"></div>
+                
+                <label for="email">E-mail:</label>
+                <input name="email" type="text" id="email"/>
+                <div id="email-error"></div>
+                
+                <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </form> 
+            <button id="calculate-button">Calculate</button>
+            <div id="calculate-message"></div>
+        </fieldset>
+        <div id="welcome-message"></div>
+    </body>
+</html>

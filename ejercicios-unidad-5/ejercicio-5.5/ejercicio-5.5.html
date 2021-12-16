@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejercicio 5.5</title>
+    <script type="text/javascript" src="ejercicio-5.5.js"></script>
+    <style type="text/css">
+      .border-correct {
+          border: 1px solid green;
+      }
+      .border-wrong {
+          border: 1px solid red;
+      }
+      .label-correct {
+          color: green;
+      }
+      .label-wrong {
+          color: red;
+      }
+      #record-error, #artist-error, #come-out-date-error, 
+            #shelf-error, #genre-error{
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+  </style>
+  </head>
+  <body>
+    <h1>EJERCICIO 5.5</h1>
+    <form name="formulario" id="formulario" method="get">
+                
+      <label for="record" id="label-record" >Record:</label>
+      <input type="text" name="record" id="record" 
+      onchange="validateInput('record', 'record-error', 'label-record')"/>
+      <div id="record-error"></div>
+      
+      <label for="artist" id="label-artist" >Artist:</label>
+      <input type="text" name="artist" id="artist" 
+      onchange="validateInput('artist', 'artist-error', 'label-artist')"/>
+      <div id="artist-error"></div>
+
+      <label for="come-out-date" id="label-come-out-date" >Come-out Date:</label>
+      <input name="come-out-date" type="text" id="come-out-date" 
+      onchange="validateInput('come-out-date', 'come-out-date-error', 'label-come-out-date')"/>
+      <div id="come-out-date-error"></div>
+
+      <label for="shelf" id="label-shelf" >Shelf:</label>
+      <input name="shelf" type="text" id="shelf" 
+      onchange="validateInput('shelf', 'shelf-error', 'label-shelf')"/>
+      <div id="shelf-error"></div>
+
+      <label for="genre" id="label-genre" >Genre:</label>
+      <select name="genre" id="genre"
+      onchange="validateInput('genre', 'genre-error', 'label-genre')">
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="punk">Punk</option>
+          <option value="indie">Indie</option>
+      </select>
+      <div id="genre-error"></div>
+
+      <label for="borrow" id="label-borrow" >Borrow</label>
+      <input type="checkbox" id="borrow" name="borrow" value="borrow">
+
+      <input type="reset" name="limpiar" id="button" value="Limpiar" />
+      <input type="submit" name="enviar" id="enviar" value="Enviar" />
+  </form> 
+  <div id="errores"></div>
+  <div id="intentos"></div>
+</fieldset>
+</body>
+  </body>
+</html>

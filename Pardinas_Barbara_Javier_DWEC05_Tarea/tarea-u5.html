@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>tarea unidad 5</title>
+        <script type="text/javascript" src="tarea-u5.js"></script>
+        <style type="text/css">
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:150px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:#66CCCC;
+                width:400px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+            #mensajes{
+                float: left;
+                background:#33FF33;
+                width: 325px;
+            }
+            #errores{
+                float: left;
+                background:#FF6633;
+                width: 325px;
+            }
+            #intentos{
+                float: left;
+                background:#CCFF33;
+                width: 325px;
+            }
+            .error{
+                border: solid 2px #FF0000;
+            }
+
+            #name-error, #lastname-error, #age-error, 
+            #nif-error, #email-error, #town-error, #date-error, 
+            #phone-error, #time-error {
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>TAREA UNIDAD 5</legend>
+            <form name="formulario" id="formulario" method="get">
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" 
+                onblur="onBlurToUpperCase('nombre')" onchange="validateInput('nombre', 'name-error')"/>
+                <div id="name-error"></div>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" 
+                onblur="onBlurToUpperCase('apellidos')" onchange="validateInput('apellidos', 'lastname-error')"/>
+                <div id="lastname-error"></div>
+                
+                <label for="edad">Edad:</label>
+                <input name="edad" type="text" id="edad" maxlength="3" 
+                onchange="validateInput('edad', 'age-error')"/>
+                <div id="age-error"></div>
+                
+                <label for="nif">NIF:</label>
+                <input name="nif" type="text" id="nif" 
+                onchange="validateInput('nif', 'nif-error')"/>
+                <div id="nif-error"></div>
+                
+                <label for="email">E-mail:</label>
+                <input name="email" type="text" id="email" 
+                onchange="validateInput('email', 'email-error')"/>
+                <div id="email-error"></div>
+
+                
+                <label for="provincia">Provincia:</label>
+                <select name="provincia" id="provincia"
+                onchange="validateInput('provincia', 'town-error')">
+                    <option value="0" selected="selected">Seleccione Provincia</option>
+                    <option value="C">A Coruña</option>
+                    <option value="LU">Lugo</option>
+                    <option value="OU">Ourense</option>
+                    <option value="OU">Pontevedra</option>
+                </select>
+                <div id="town-error"></div>
+
+                
+                <label for="fecha">Fecha Nacimiento:</label>
+                <input name="fecha" type="text" id="fecha" 
+                onchange="validateInput('fecha', 'date-error')"/>
+                <div id="date-error"></div>
+                
+                <label for="telefono">Teléfono:</label>
+                <input name="telefono" type="text" id="telefono" maxlength="9"
+                onchange="validateInput('telefono', 'phone-error')"/>
+                <div id="phone-error"></div>
+                
+                <label for="hora">Hora de visita:</label>
+                <input name="hora" type="text" id="hora" 
+                onchange="validateInput('hora', 'time-error')"/>
+                <div id="time-error"></div>
+                
+                <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </form> 
+            <div id="errores"></div>
+            <div id="intentos"></div>
+        </fieldset>
+    </body>
+</html>

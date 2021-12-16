@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<htm xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ejercicio-7</title>
+        <script type="text/javascript" src="ejercicio-5.7.js"></script>
+        <style type="text/css">
+            label{
+                width: 150px;
+                margin-bottom:5px;     
+            }
+            input,select {
+                width:150px;
+                margin-bottom:5px;
+            }
+            fieldset{
+                background:#66CCCC;
+                width:400px;
+                border: thick solid #306;
+            }
+            legend{
+                border-top-width: medium;
+                border-right-width: medium;
+                border-bottom-width: medium;
+                border-left-width: medium;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                background-color: #FFF;     
+            }
+            #mensajes{
+                float: left;
+                background:#33FF33;
+                width: 325px;
+            }
+            #errores{
+                float: left;
+                background:#FF6633;
+                width: 325px;
+            }
+            #intentos{
+                float: left;
+                background:#CCFF33;
+                width: 325px;
+            }
+            .error{
+                border: solid 2px #FF0000;
+            }
+
+            #name-error, #lastname-error, #age-error, 
+            #nif-error, #email-error, #town-error, #date-error, 
+            #phone-error, #time-error {
+                color: red;
+                font-weight: 700;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>EJERCICIO 7</legend>
+            <form name="formulario" id="formulario" method="get">
+
+                <label for="date">Date:</label>
+                <input name="date" type="text" id="date" 
+                onchange="validateInput('date', 'date-error')"/>
+                <div id="date-error"></div>
+                
+                <label for="employee">Employee:</label>
+                <input type="text" name="employee" id="employee" 
+                onchange="validateInput('employee', 'employee-error')"/>
+                <div id="employee-error"></div>
+
+                <label for="addressee">Addressee:</label>
+                <input type="text" name="addressee" id="addressee" 
+                onchange="validateInput('addressee', 'addressee-error')"/>
+                <div id="addressee-error"></div>
+
+                <label for="weight">Weight:</label>
+                <input name="weight" type="text" id="weight" 
+                onchange="validateInput('weight', 'weight-error')"/>
+                <div id="weight-error"></div>
+                
+                <label for="bank-account">Bank Account:</label>
+                <input name="bank-account" type="text" id="bank-account" 
+                onchange="validateInput('bank-account', 'bank-error')"/>
+                <div id="bank-error"></div>               
+                
+                <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </form> 
+            <div id="errores"></div>
+            <div id="intentos"></div>
+        </fieldset>
+    </body>
+</html>

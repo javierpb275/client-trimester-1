@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="ejercicio4.js"></script>
+    <title>Records</title>
+    <style>
+      .lasOpciones {
+        border: 4px solid black;
+        width: 500px;
+        margin: 20px;
+      }
+      .titulo {
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .losBotones {
+        text-align: center;
+        padding: 10px;
+      }
+      #listado {
+        display: none;
+      }
+      #anadir {
+        display: none;
+      }
+      #borrar {
+        display: none;
+      }
+      #consultar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button onclick="numberOfRecords()">Mostrar numero de discos</button>
+
+    <button onclick="toggleShow('listado')">Mostrar tabla de discos</button>
+
+    <button onclick="toggleShow('anadir')">Añadir disco</button>
+
+    <button onclick="toggleShow('borrar')">Borrar disco</button>
+
+    <button onclick="toggleShow('consultar')">Consultar disco</button>
+
+    <div class="lasOpciones" id="listado">
+      <div class="titulo">
+        Cómo quiere que se muestren los datos de los discos?
+      </div>
+      <div class="losBotones">
+        <button onclick="showSortedRecords()">Por orden de array</button>
+        <button onclick="showBackwards()">Al revés de orden de array</button>
+        <button onclick="showSortedAbc()">Ordenados alfabéticamente</button>
+      </div>
+    </div>
+
+    <div class="lasOpciones" id="anadir">
+      <div class="titulo">Dónde quiere añadir el disco?</div>
+      <div class="losBotones">
+        <button onclick="atTheBeginning()">Al principio del array</button>
+        <button onclick="atTheEnd()">Al final del array</button>
+      </div>
+    </div>
+
+    <div class="lasOpciones" id="borrar">
+      <div class="titulo">Por dónde quiere borrar el disco?</div>
+      <div class="losBotones">
+        <button onclick="deleteAtTheBeginning()">
+          Por el principio del array
+        </button>
+        <button onclick="deleteAtTheEnd()">Por el final del array</button>
+      </div>
+    </div>
+
+    <div class="lasOpciones" id="consultar">
+      <div class="titulo">
+        Por qué parámetro prefiere consultar la lista de discos?
+      </div>
+      <div class="losBotones">
+        <button onclick="checkByPosition()">Por su posición en el array</button>
+        <button onclick="checkByName()">Por nombre</button>
+      </div>
+    </div>
+  </body>
+</html>
